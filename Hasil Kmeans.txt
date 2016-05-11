@@ -1,0 +1,136 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.ClassificationViaClustering -W weka.clusterers.SimpleKMeans -- -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 2 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     Wisconsin Diagnostic Breast Cancer-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    569
+Attributes:   32
+              IDNumber
+              class
+              Mean_Radius
+              Mean_Texture
+              Mean_Perimeter
+              Mean_Area
+              Mean_Smoothness
+              Mean_Compactness
+              Mean_Concavity
+              Mean_Concave_Points
+              Mean_Symmetry
+              Mean_Fractal_Dimension
+              Radius_SE
+              Texture_SE
+              Perimeter_SE
+              Area_SE
+              Smoothness_SE
+              Compactness_SE
+              Concavity_SE
+              Concave_Points_SE
+              Symmetry_SE
+              Fractal_Dimension_SE
+              Worst_Radius
+              Worst_Texture
+              Worst_Perimeter
+              Worst_Area
+              Worst_Smoothness
+              Worst_Compactness
+              Worst_Concavity
+              Worst_Concave_Points
+              Worst_Symmetry
+              Worst_Fractal_Dimension
+Test mode:    split 75.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+ClassificationViaClustering
+===========================
+
+kMeans
+======
+
+Number of iterations: 8
+Within cluster sum of squared errors: 226.4980214413359
+
+Initial starting points (random):
+
+Cluster 0: 0.000977,0.240381,0.310788,0.227144,0.128017,0.281936,0.118275,0.017596,0.042187,0.25,0.221567,0.047619,0.174991,0.037789,0.020953,0.185845,0.065401,0.014727,0.104092,0.16798,0.064232,0.203131,0.400853,0.179939,0.092755,0.381232,0.104695,0.03599,0.175017,0.259215,0.08083
+Cluster 1: 0.000985,0.21719,0.315522,0.210144,0.112916,0.29638,0.177412,0.128515,0.070974,0.490404,0.267692,0.063335,0.23864,0.068275,0.025211,0.189176,0.136825,0.112298,0.166679,0.151939,0.084442,0.182853,0.398721,0.179391,0.082408,0.354817,0.161452,0.204473,0.229003,0.289769,0.08284
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                       Cluster#
+Attribute                  Full Data          0          1
+                             (569.0)    (380.0)    (189.0)
+==========================================================
+IDNumber                      0.0333     0.0282     0.0437
+Mean_Radius                   0.3382     0.2554     0.5048
+Mean_Texture                   0.324     0.2883     0.3956
+Mean_Perimeter                0.3329      0.247     0.5058
+Mean_Area                     0.2169     0.1439     0.3638
+Mean_Smoothness               0.3948     0.3574     0.4699
+Mean_Compactness              0.2606     0.1802     0.4223
+Mean_Concavity                0.2081     0.1034     0.4184
+Mean_Concave_Points           0.2431     0.1307     0.4693
+Mean_Symmetry                 0.3796     0.3401      0.459
+Mean_Fractal_Dimension        0.2704     0.2559     0.2995
+Radius_SE                     0.1063     0.0643     0.1909
+Texture_SE                    0.1893     0.1884     0.1911
+Perimeter_SE                  0.0994     0.0598      0.179
+Area_SE                       0.0626     0.0287     0.1309
+Smoothness_SE                 0.1811     0.1816     0.1802
+Compactness_SE                0.1744     0.1324     0.2589
+Concavity_SE                  0.0805     0.0582     0.1254
+Concave_Points_SE             0.2235     0.1807     0.3094
+Symmetry_SE                   0.1781     0.1722     0.1901
+Fractal_Dimension_SE          0.1002      0.084     0.1327
+Worst_Radius                  0.2967     0.2052     0.4805
+Worst_Texture                  0.364     0.3207     0.4511
+Worst_Perimeter               0.2831     0.1924     0.4655
+Worst_Area                    0.1709     0.0994     0.3146
+Worst_Smoothness              0.4041     0.3571     0.4987
+Worst_Compactness             0.2202     0.1487     0.3639
+Worst_Concavity               0.2174     0.1314     0.3903
+Worst_Concave_Points          0.3938     0.2623     0.6583
+Worst_Symmetry                0.2633     0.2264     0.3375
+Worst_Fractal_Dimension       0.0839     0.0786     0.0947
+
+
+
+Clusters to classes mapping:
+  1. Cluster: B (2)
+  2. Cluster: M (1)
+
+Classes to clusters mapping:
+  1. Class (M): 2. Cluster
+  2. Class (B): 1. Cluster
+
+
+
+Time taken to build model: 0.06 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on training split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         131               92.2535 %
+Incorrectly Classified Instances        11                7.7465 %
+Kappa statistic                          0.8373
+Mean absolute error                      0.0775
+Root mean squared error                  0.2783
+Relative absolute error                 16.4231 %
+Root relative squared error             56.8546 %
+Total Number of Instances              142     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.058    0.909      0.893    0.901      0.837    0.917     0.854     M
+                 0.942    0.107    0.931      0.942    0.936      0.837    0.917     0.912     B
+Weighted Avg.    0.923    0.088    0.922      0.923    0.922      0.837    0.917     0.889     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 50  6 |  a = M
+  5 81 |  b = B

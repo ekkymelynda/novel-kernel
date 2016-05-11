@@ -1,0 +1,16 @@
+Clustering :
+1. Normalize wdbc 
+2. Classify : meta >> ClassificationViaClustering (Percentage split : 75%)
+3. (Nom)Class
+4. Start 
+5. Accuration : +- 92%
+6. Save
+
+
+Classify : 
+1. Open hasil clustering, remove predicted margin 
+2. Classify (SMO (LibSVM(One-Class)))
+3. Cross Val 10 folds
+4. (Nom) predicted class
+5. Start
+6. Accuration : +- 98%

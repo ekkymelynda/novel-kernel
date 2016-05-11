@@ -1,0 +1,118 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.LibSVM -S 2 -K 2 -D 3 -G 0.0 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.001 -P 0.1 -model \"C:\\\\Program Files\\\\Weka-3-8\" -seed 1"
+Relation:     Wisconsin Diagnostic Breast Cancer-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0_predicted-weka.filters.unsupervised.attribute.Remove-R2
+Instances:    142
+Attributes:   33
+              IDNumber
+              predicted class
+              class
+              Mean_Radius
+              Mean_Texture
+              Mean_Perimeter
+              Mean_Area
+              Mean_Smoothness
+              Mean_Compactness
+              Mean_Concavity
+              Mean_Concave_Points
+              Mean_Symmetry
+              Mean_Fractal_Dimension
+              Radius_SE
+              Texture_SE
+              Perimeter_SE
+              Area_SE
+              Smoothness_SE
+              Compactness_SE
+              Concavity_SE
+              Concave_Points_SE
+              Symmetry_SE
+              Fractal_Dimension_SE
+              Worst_Radius
+              Worst_Texture
+              Worst_Perimeter
+              Worst_Area
+              Worst_Smoothness
+              Worst_Compactness
+              Worst_Concavity
+              Worst_Concave_Points
+              Worst_Symmetry
+              Worst_Fractal_Dimension
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: M, B
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.0832 * (normalized) IDNumber
+ +       1.0102 * (normalized) class=B
+ +      -0.5004 * (normalized) Mean_Radius
+ +      -0.1444 * (normalized) Mean_Texture
+ +      -0.5604 * (normalized) Mean_Perimeter
+ +      -0.4232 * (normalized) Mean_Area
+ +      -0.25   * (normalized) Mean_Smoothness
+ +      -1.0666 * (normalized) Mean_Compactness
+ +      -0.9925 * (normalized) Mean_Concavity
+ +      -0.8266 * (normalized) Mean_Concave_Points
+ +      -0.5732 * (normalized) Mean_Symmetry
+ +      -0.4532 * (normalized) Mean_Fractal_Dimension
+ +      -0.2012 * (normalized) Radius_SE
+ +       0.3621 * (normalized) Texture_SE
+ +      -0.3949 * (normalized) Perimeter_SE
+ +      -0.2357 * (normalized) Area_SE
+ +       0.0327 * (normalized) Smoothness_SE
+ +      -0.4902 * (normalized) Compactness_SE
+ +      -0.3558 * (normalized) Concavity_SE
+ +      -0.6118 * (normalized) Concave_Points_SE
+ +       0.1037 * (normalized) Symmetry_SE
+ +      -0.361  * (normalized) Fractal_Dimension_SE
+ +      -0.4952 * (normalized) Worst_Radius
+ +       0.2035 * (normalized) Worst_Texture
+ +      -0.5242 * (normalized) Worst_Perimeter
+ +      -0.4349 * (normalized) Worst_Area
+ +      -0.4221 * (normalized) Worst_Smoothness
+ +      -0.4474 * (normalized) Worst_Compactness
+ +      -0.5711 * (normalized) Worst_Concavity
+ +      -1.1517 * (normalized) Worst_Concave_Points
+ +      -0.2052 * (normalized) Worst_Symmetry
+ +      -0.4326 * (normalized) Worst_Fractal_Dimension
+ +       3.2463
+
+Number of kernel evaluations: 1547 (77.853% cached)
+
+
+
+Time taken to build model: 0.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         140               98.5915 %
+Incorrectly Classified Instances         2                1.4085 %
+Kappa statistic                          0.9705
+Mean absolute error                      0.0141
+Root mean squared error                  0.1187
+Relative absolute error                  2.9639 %
+Root relative squared error             24.3506 %
+Total Number of Instances              142     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.023    0.965      1.000    0.982      0.971    0.989     0.965     M
+                 0.977    0.000    1.000      0.977    0.988      0.971    0.989     0.991     B
+Weighted Avg.    0.986    0.009    0.986      0.986    0.986      0.971    0.989     0.981     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 55  0 |  a = M
+  2 85 |  b = B
